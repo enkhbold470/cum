@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to C.U.M</h1>
+    <p class="lead">Centralized User Management System</p>
+    <hr class="my-4">
+    {% if current_user.is_authenticated %}
+    <p>Welcome back, {{ current_user.username }}!</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('main.profile') }}" role="button">View Profile</a>
+    {% else %}
+    <p>Get started by creating an account or signing in.</p>
+    <a class="btn btn-primary btn-lg me-2" href="{{ url_for('auth.register') }}" role="button">Register</a>
+    <a class="btn btn-outline-primary btn-lg" href="{{ url_for('auth.login') }}" role="button">Login</a>
+    {% endif %}
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Secure Authentication</h5>
+                <p class="card-text">State-of-the-art security measures to protect your account.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">User Management</h5>
+                <p class="card-text">Easy-to-use interface for managing user accounts and permissions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Admin Dashboard</h5>
+                <p class="card-text">Powerful tools for administrators to manage the system.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
