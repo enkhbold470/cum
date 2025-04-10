@@ -29,7 +29,7 @@ A modern, secure, and efficient user management system built with Flask and HTMX
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/cum.git
+git clone https://github.com/enkhbold470/cum.git
 cd cum
 ```
 
@@ -89,21 +89,3 @@ flask run
 - Session management
 - Role-based access control
 - Secure password reset (optional)
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Flask
-- HTMX
-- Bootstrap
-- SQLAlchemy 
